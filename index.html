@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amigos do Sorriso | Dentista em Rondonópolis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--indigo:#2E3192;--royal:#1E4FD8;--cy:#7FD6FF;--ice:#F4F7FF;--bg1:#E3E5F1;--bg2:#F4F9FF;--card:#fff;--tx:#1a1d4d;--mut:#555a85;--line:#d8dcf0;--p:0;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg1:#0e1030;--bg2:#0b1a3d;--card:#171a4a;--tx:#eef1ff;--mut:#aab2e0;--line:#2c3170}}
+:root[data-theme="dark"]{--bg1:#0e1030;--bg2:#0b1a3d;--card:#171a4a;--tx:#eef1ff;--mut:#aab2e0;--line:#2c3170}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;font:400 16px/1.6 Inter,system-ui,sans-serif;color:var(--tx);background:color-mix(in srgb,var(--bg1) calc((1 - var(--p))*100%),var(--bg2))}
+img,video,iframe{max-width:100%;height:auto}
+h1,h2,h3{font-family:"Baloo 2",system-ui,sans-serif;font-weight:800;line-height:1.05;margin:0;overflow-wrap:break-word}
+h2{font-size:clamp(2rem,8vw,3.2rem);color:var(--indigo);margin-bottom:.5rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:var(--cy)}}
+:root[data-theme="dark"] h2{color:var(--cy)}
+p{margin:0 0 1rem;overflow-wrap:break-word}
+section{padding:64px 24px;max-width:1040px;margin:auto}
+.lead{color:var(--mut);max-width:34em}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;max-width:100%;gap:.5rem;background:var(--royal);color:#fff;font-weight:600;text-decoration:none;padding:15px 26px;border-radius:999px;box-shadow:0 10px 30px -10px #1E4FD8;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}.btn:focus-visible,a:focus-visible,input:focus-visible+.hd{outline:3px solid var(--cy);outline-offset:3px}
+.btn.w{background:#fff;color:var(--indigo)}
+/* hero */
+.hero{max-width:none;min-height:100svh;padding:20px 20px 80px;background:linear-gradient(180deg,#0a0e4a 0%,#2E3192 42%,#6a86e6 72%,#e4ecff 100%);color:#fff;text-align:center;position:relative;overflow:hidden;display:flex;flex-direction:column;align-items:center}
+.brand{font:800 1.05rem "Baloo 2";letter-spacing:.02em;align-self:flex-start;display:flex;align-items:center;gap:8px}
+.stage{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:100%;position:relative;will-change:transform}
+.smile{width:min(78vw,420px);overflow:visible}
+.ln{fill:none;stroke:#fff;stroke-width:9;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:var(--o,1);animation:var(--an,draw 1.6s .2s cubic-bezier(.6,0,.2,1) forwards)}
+.e{animation:var(--ae,draw 1s 1.4s forwards,blink 5s 3s infinite);transform-origin:50% 100%;transform-box:fill-box}
+.fill{fill:#fff;opacity:var(--fo,0);animation:var(--af,fi 1s 1.6s forwards)}
+.star{fill:var(--cy);transform-box:fill-box;transform-origin:center;opacity:var(--so,0);animation:var(--as,fi .4s 2s forwards,tw 2.4s 2.2s infinite)}
+@keyframes draw{to{stroke-dashoffset:0}}@keyframes fi{to{opacity:1}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}96%{transform:scaleY(.15)}}
+@keyframes tw{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.5) rotate(45deg)}}
+h1{font-size:clamp(2.1rem,11.5vw,6rem);letter-spacing:.01em;max-width:100%;text-shadow:0 6px 30px #0a0e4a88}
+.w{display:inline-block;white-space:nowrap}
+h1 .ch{display:inline-block;opacity:0;transform:translateY(40px) rotate(6deg);animation:up .7s calc(.9s + var(--i)*45ms) cubic-bezier(.2,.9,.3,1.2) forwards}
+@keyframes up{to{opacity:1;transform:none}}
+.tag{font-size:1.15rem;opacity:.9;margin:0 0 8px}
+.spk{position:absolute;color:var(--cy);font-size:18px;animation:fl 6s ease-in-out infinite;opacity:.8;will-change:transform}
+@keyframes fl{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-22px) scale(1.4)}}
+.hint{position:absolute;bottom:18px;left:50%;translate:-50% 0;width:22px;height:36px;border:2px solid #1E4FD8;border-radius:12px;opacity:.7}
+.hint::after{content:"";position:absolute;left:50%;top:6px;width:4px;height:8px;margin-left:-2px;background:#1E4FD8;border-radius:2px;animation:sc 1.6s infinite}
+@keyframes sc{50%{transform:translateY(10px);opacity:.2}}
+/* reveal */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1);transition-delay:calc(var(--d,0)*90ms)}
+.rv.in{opacity:1;transform:none}
+/* services */
+.grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:28px}
+@media (min-width:640px){.grid{grid-template-columns:repeat(2,1fr)}}@media (min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:24px}
+.card h3{font-size:1.5rem;color:var(--indigo)}.card p{color:var(--mut);margin:.4rem 0 0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .card h3{color:var(--cy)}}
+.ic{width:64px;height:64px;margin-bottom:12px;overflow:visible}
+.ic *{transform-box:fill-box}
+.ic .s{fill:none;stroke:var(--royal);stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+.ic .f{fill:var(--cy)}
+.brush{animation:scrub 1.2s ease-in-out infinite}@keyframes scrub{50%{transform:translateX(14px) rotate(-6deg)}}
+.bub{fill:var(--cy);opacity:0;animation:bub 2.4s infinite}.bub:nth-of-type(2){animation-delay:.8s}.bub:nth-of-type(3){animation-delay:1.6s}
+@keyframes bub{0%{transform:translateY(8px);opacity:0}30%{opacity:1}100%{transform:translateY(-18px);opacity:0}}
+.sweep{fill:#fff;opacity:.8;animation:sw 2.6s infinite}@keyframes sw{0%{transform:translateX(-50px) skewX(-20deg)}60%,100%{transform:translateX(70px) skewX(-20deg)}}
+.crk{animation:al 3s ease-in-out infinite}.crk:nth-child(1){--r:-14deg}.crk:nth-child(2){--r:9deg}.crk:nth-child(3){--r:-8deg}
+@keyframes al{0%,15%{transform:rotate(var(--r))}55%,100%{transform:rotate(0)}}
+.thr{stroke-dasharray:6 6;animation:th 1s linear infinite}@keyframes th{to{stroke-dashoffset:-12}}
+.fil{fill:var(--cy);transform-origin:bottom;animation:fl2 3s infinite}@keyframes fl2{0%{transform:scaleY(0)}60%,100%{transform:scaleY(1)}}
+/* why + stats */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:30px 0;text-align:center}
+.stats b{display:block;font:800 clamp(1.5rem,7.4vw,3rem)/1 "Baloo 2";color:var(--royal)}.stats span{font-size:.82rem;color:var(--mut)}
+.stamps{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;margin-top:24px;padding:10px;overflow:clip}
+@media (min-width:700px){.stamps{grid-template-columns:repeat(3,1fr)}}
+.stamp{border:3px solid var(--royal);color:var(--royal);border-radius:18px;padding:16px;font:800 1.2rem/1.1 "Baloo 2";text-align:center;opacity:0;transform:scale(1.7) rotate(-8deg);transition:all .5s cubic-bezier(.3,1.6,.5,1);transition-delay:calc(var(--d)*350ms)}
+.stamp.in{opacity:1;transform:rotate(-2deg)}
+.why{display:grid;gap:14px;margin-top:20px}
+.why div{padding-left:18px;border-left:4px solid var(--cy)}.why b{display:block;font:800 1.3rem "Baloo 2"}
+/* before after */
+.ba{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:16/10;margin-top:24px;--v:50%;user-select:none;touch-action:pan-y}
+.ba svg{position:absolute;inset:0;width:100%;height:100%}
+.ba .a{clip-path:inset(0 calc(100% - var(--v)) 0 0)}
+.ba .hd{position:absolute;top:0;bottom:0;left:var(--v);width:4px;margin-left:-2px;background:#fff;pointer-events:none}
+.ba .hd::after{content:"↔";position:absolute;top:50%;left:50%;translate:-50% -50%;width:46px;height:46px;border-radius:50%;background:#fff;color:var(--indigo);display:grid;place-items:center;font-size:20px;box-shadow:0 6px 20px #0004}
+.ba input{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:ew-resize;margin:0}
+.lb{position:absolute;bottom:12px;font:800 1rem "Baloo 2";padding:3px 14px;border-radius:99px;background:#fff;color:var(--indigo)}
+.spark{fill:#fff;transform-box:fill-box;transform-origin:center;animation:tw 2.2s infinite}
+/* steps */
+.steps{display:grid;gap:16px;margin-top:24px;counter-reset:s}
+@media (min-width:700px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:26px;padding:24px;counter-increment:s}
+.step::before{content:counter(s);display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--royal);color:#fff;font:800 1.3rem "Baloo 2";margin-bottom:10px}
+.step b{font:800 1.3rem "Baloo 2";display:block}
+/* reviews */
+.rate{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:10px 0 24px}
+.stars{display:flex;gap:4px}.stars i{width:26px;height:26px;background:#FFB400;clip-path:polygon(50% 0,62% 36%,100% 38%,70% 60%,80% 96%,50% 75%,20% 96%,30% 60%,0 38%,38% 36%);transform:scale(0);transition:transform .5s cubic-bezier(.3,1.7,.5,1);transition-delay:calc(var(--k)*120ms)}
+.in .stars i{transform:scale(1)}
+.quote{font-style:italic;color:var(--mut)}.quote small{display:block;font-style:normal;margin-top:8px;color:var(--royal);font-weight:600}
+/* loc */
+.loc{background:linear-gradient(135deg,var(--indigo),var(--royal));color:#fff;border-radius:30px;padding:30px;position:relative;overflow:hidden}
+.loc svg{position:absolute;right:-10px;bottom:-10px;width:150px;opacity:.18}
+.loc p{max-width:26em}
+/* meter */
+.meter{position:fixed;right:max(2px,env(safe-area-inset-right));top:50%;translate:0 -50%;width:22px;display:flex;flex-direction:column;align-items:center;gap:6px;z-index:5;pointer-events:none}
+.trk{width:4px;height:min(34vh,240px);background:#1E4FD844;border-radius:9px;overflow:hidden;display:flex;align-items:flex-end}
+.trk i{display:block;width:100%;height:calc(var(--p)*100%);background:var(--royal);border-radius:9px}
+/* footer */
+footer{text-align:center;padding:70px 20px 120px;background:var(--indigo);color:#fff;margin-top:40px}
+footer .smile{width:150px;--o:0;--an:none;--ae:blink 4s infinite;--fo:1;--af:none;--so:1;--as:tw 2.4s infinite}
+footer h2{color:#fff}
+.orb{display:inline-block;animation:spin 14s linear infinite;color:var(--cy)}@keyframes spin{to{transform:rotate(360deg)}}
+/* wa */
+.wa{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:calc(18px + env(safe-area-inset-bottom,0px));width:62px;height:62px;border-radius:50%;background:#25D366;display:grid;place-items:center;z-index:9;box-shadow:0 8px 24px #0006;animation:pu 2.4s infinite}
+@keyframes pu{0%{box-shadow:0 8px 24px #0006,0 0 0 0 #25D36688}70%,100%{box-shadow:0 8px 24px #0006,0 0 0 20px #25D36600}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto}
+.rv,.stamp,.ch,.fill,.star{opacity:1!important;transform:none!important}.ln{stroke-dashoffset:0!important}.stars i{transform:none}.stamp{transform:rotate(-2deg)!important}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<symbol id="teeth" viewBox="0 0 300 100"><g><rect x="8" y="20" width="40" height="64" rx="16"/><rect x="55" y="12" width="40" height="76" rx="16"/><rect x="102" y="8" width="44" height="84" rx="18"/><rect x="154" y="8" width="44" height="84" rx="18"/><rect x="205" y="12" width="40" height="76" rx="16"/><rect x="252" y="20" width="40" height="64" rx="16"/></g></symbol>
+<symbol id="sm" viewBox="0 0 400 260"><path class="ln" pathLength="1" d="M48 128 Q200 160 352 128"/><path class="ln" pathLength="1" d="M64 132 C72 250 328 250 336 132"/><path class="ln e" pathLength="1" d="M128 80 q20 -30 42 0"/><path class="ln e" pathLength="1" d="M230 80 q20 -30 42 0"/><path class="ln" pathLength="1" d="M30 112 q14 6 22 18 M370 112 q-14 6 -22 18"/><path class="fill" d="M110 168 Q200 190 290 168 Q270 222 200 226 Q130 222 110 168Z" opacity="0"/><path class="star" d="M268 150 l6 14 14 6 -14 6 -6 14 -6 -14 -14 -6 14 -6z"/></symbol>
+</defs></svg>
+
+<header class="hero">
+  <div class="brand"><svg width="34" height="26" viewBox="0 0 400 260" fill="none" stroke="#fff" stroke-width="22" stroke-linecap="round"><path d="M48 128 Q200 160 352 128M64 132 C72 250 328 250 336 132M128 80q20-30 42 0M230 80q20-30 42 0"/></svg>amigos do sorriso</div>
+  <div class="stage" id="stage">
+    <svg class="smile" viewBox="0 0 400 260" role="img" aria-label="Sorriso do logo Amigos do Sorriso"><use href="#sm"/></svg>
+    <h1 id="ttl" aria-label="Amigos do Sorriso"></h1>
+    <p class="tag">Cuidando do seu sorriso</p>
+    <a class="btn w" href="https://wa.me/5566992756817?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar consulta</a>
+    <span class="spk" style="left:8%;top:14%" data-s="-60">✦</span><span class="spk" style="right:10%;top:24%;animation-delay:1s" data-s="70">✦</span><span class="spk" style="left:16%;bottom:16%;animation-delay:2s" data-s="-40">✧</span><span class="spk" style="right:14%;bottom:22%;animation-delay:3s" data-s="50">✧</span>
+  </div>
+  <div class="hint" aria-hidden="true"></div>
+</header>
+
+<main>
+<section id="servicos">
+  <h2 class="rv">Serviços</h2><p class="lead rv" style="--d:1">Do cuidado do dia a dia ao sorriso dos sonhos.</p>
+  <div class="grid">
+    <article class="card rv"><svg class="ic" viewBox="0 0 64 64"><g class="brush"><rect class="s" x="8" y="26" width="34" height="9" rx="4"/><path class="s" d="M14 26v-7M22 26v-7M30 26v-7M38 26v-7"/></g><circle class="bub" cx="46" cy="30" r="3"/><circle class="bub" cx="52" cy="24" r="2.5"/><circle class="bub" cx="42" cy="22" r="2"/></svg><h3>Limpeza</h3><p>Remove placa e tártaro e deixa a boca com sensação de novo.</p></article>
+    <article class="card rv" style="--d:1"><svg class="ic" viewBox="0 0 64 64"><defs><clipPath id="c1"><path id="tp" d="M18 14c8-6 20-6 28 0 6 10-2 18-4 32-1 6-6 6-7 0l-3-12-3 12c-1 6-6 6-7 0-2-14-10-22-4-32z"/></clipPath></defs><path class="s" d="M18 14c8-6 20-6 28 0 6 10-2 18-4 32-1 6-6 6-7 0l-3-12-3 12c-1 6-6 6-7 0-2-14-10-22-4-32z"/><g clip-path="url(#c1)"><rect class="sweep" x="10" y="6" width="14" height="52"/></g></svg><h3>Clareamento</h3><p>Mais brilho e tom natural, com acompanhamento profissional.</p></article>
+    <article class="card rv" style="--d:2"><svg class="ic" viewBox="0 0 64 64"><g><rect class="crk s" x="8" y="22" width="14" height="22" rx="6"/><rect class="crk s" x="25" y="20" width="14" height="24" rx="6"/><rect class="crk s" x="42" y="22" width="14" height="22" rx="6"/></g><path class="s" d="M6 33h52" stroke-dasharray="3 5"/></svg><h3>Ortodontia</h3><p>Alinha os dentes e a mordida para uma boca mais saudável.</p></article>
+    <article class="card rv"><svg class="ic" viewBox="0 0 64 64"><path class="s" d="M20 8h24v12H20z"/><path class="s" d="M24 20v30l8 8 8-8V20"/><path class="thr s" d="M24 28h16M24 36h16M24 44h16"/></svg><h3>Implantes</h3><p>Reposição de dentes com firmeza, conforto e aspecto natural.</p></article>
+    <article class="card rv" style="--d:1"><svg class="ic" viewBox="0 0 64 64"><defs><clipPath id="c2"><path d="M18 14c8-6 20-6 28 0 6 10-2 18-4 32-1 6-6 6-7 0l-3-12-3 12c-1 6-6 6-7 0-2-14-10-22-4-32z"/></clipPath></defs><g clip-path="url(#c2)"><rect class="fil" x="10" y="10" width="44" height="46"/></g><path class="s" d="M18 14c8-6 20-6 28 0 6 10-2 18-4 32-1 6-6 6-7 0l-3-12-3 12c-1 6-6 6-7 0-2-14-10-22-4-32z"/></svg><h3>Restaurações</h3><p>Recupera a forma e a função do dente com material da cor do seu sorriso.</p></article>
+  </div>
+</section>
+
+<section id="por-que">
+  <h2 class="rv">Por que o Amigos do Sorriso</h2>
+  <div class="why">
+    <div class="rv"><b>Atendimento acolhedor</b>Você é recebido pelo nome e entende cada etapa do tratamento.</div>
+    <div class="rv" style="--d:1"><b>Cuidado e conforto</b>Consulta tranquila, sem pressa e sem susto.</div>
+    <div class="rv" style="--d:2"><b>Resultado natural e duradouro</b>Tratamento pensado para o seu rosto e para o seu dia a dia.</div>
+  </div>
+  <div class="stats rv">
+    <div><b data-to="1500" data-suf="+">0</b><span>pacientes atendidos</span></div>
+    <div><b data-to="10" data-suf="+">0</b><span>anos de experiência</span></div>
+    <div><b data-to="5" data-dec="1">0</b><span>nota no Google</span></div>
+  </div>
+  <p class="rv" style="font-size:.8rem;color:var(--mut)">Pacientes e anos de experiência são valores de exemplo: edite no atributo data-to.</p>
+  <div class="stamps" id="stamps">
+    <div class="stamp" style="--d:0">Profissionais qualificados</div><div class="stamp" style="--d:1">Atendimento humanizado</div><div class="stamp" style="--d:2">Pontualidade que você confia</div>
+  </div>
+</section>
+
+<section id="antes-depois">
+  <h2 class="rv">Antes e depois do clareamento</h2><p class="lead rv" style="--d:1">Arraste para comparar. Ilustração, sem fotos de pacientes.</p>
+  <div class="ba rv" id="ba">
+    <svg viewBox="0 0 300 180" preserveAspectRatio="xMidYMid slice"><rect width="300" height="180" fill="#9fdcff"/><rect width="300" height="180" fill="#2E3192" opacity=".35"/><use href="#teeth" x="0" y="38" width="300" height="100" fill="#fff"/><path class="spark" d="M40 30l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path class="spark" style="animation-delay:.8s" d="M250 24l3 7 7 3-7 3-3 7-3-7-7-3 7-3z"/><path class="spark" style="animation-delay:1.4s" d="M160 150l2 5 5 2-5 2-2 5-2-5-5-2 5-2z"/></svg>
+    <svg class="a" viewBox="0 0 300 180" preserveAspectRatio="xMidYMid slice"><rect width="300" height="180" fill="#c9a574"/><rect width="300" height="180" fill="#8a6a3d" opacity=".5"/><use href="#teeth" x="0" y="38" width="300" height="100" fill="#d9b457"/><rect width="300" height="180" fill="#b98f55" opacity=".25"/></svg>
+    <span class="lb" style="left:12px">Antes</span><span class="lb" style="right:12px">Depois</span>
+    <div class="hd"></div><input type="range" min="0" max="100" value="50" aria-label="Comparar antes e depois" id="rng">
+  </div>
+</section>
+
+<section id="como-funciona">
+  <h2 class="rv">Como funciona</h2>
+  <div class="steps">
+    <div class="step rv"><b>Chame no WhatsApp</b>Conte o que você precisa e escolha um horário.</div>
+    <div class="step rv" style="--d:1"><b>Avaliação e consulta</b>O dentista examina e explica o melhor caminho.</div>
+    <div class="step rv" style="--d:2"><b>Tratamento feito</b>Você sai com o cuidado combinado e as orientações.</div>
+  </div>
+</section>
+
+<section id="avaliacoes">
+  <h2 class="rv">Avaliações</h2>
+  <div class="rate rv" id="rt"><div class="stars"><i style="--k:0"></i><i style="--k:1"></i><i style="--k:2"></i><i style="--k:3"></i><i style="--k:4"></i></div><b>5,0</b><span style="color:var(--mut)">147 avaliações no Google</span></div>
+  <div class="grid">
+    <blockquote class="card quote rv" style="margin:0">“Atendimento muito atencioso, saí sem nenhum medo.”<small>Paciente (exemplo, edite)</small></blockquote>
+    <blockquote class="card quote rv" style="margin:0;--d:1">“Limpeza rápida e o consultório é super acolhedor.”<small>Paciente (exemplo, edite)</small></blockquote>
+    <blockquote class="card quote rv" style="margin:0;--d:2">“Explicaram tudo com calma. Recomendo!”<small>Paciente (exemplo, edite)</small></blockquote>
+  </div>
+</section>
+
+<section id="localizacao">
+  <div class="loc rv">
+    <h2 style="color:#fff">Onde estamos</h2>
+    <p>R. Fernando Corrêa da Costa, 679<br>Centro, Rondonópolis - MT, 78700-100</p>
+    <a class="btn w" href="https://www.google.com/maps/search/?api=1&query=R.+Fernando+Corr%C3%AAa+da+Costa%2C+679%2C+Rondon%C3%B3polis%2C+MT" target="_blank" rel="noopener">Como chegar</a>
+    <svg viewBox="0 0 24 24" fill="#fff"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.5 2.5 0 0 1 0 5z"/></svg>
+  </div>
+</section>
+
+<section id="contato" style="text-align:center">
+  <h2 class="rv">Vamos cuidar do seu sorriso?</h2>
+  <p class="lead rv" style="margin:0 auto 20px">Fale com a gente pelo WhatsApp: (66) 99275-6817</p>
+  <a class="btn rv" href="https://wa.me/5566992756817?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener">Agendar consulta</a>
+</section>
+</main>
+
+<footer>
+  <svg class="smile" viewBox="0 0 400 260" aria-hidden="true"><use href="#sm"/></svg>
+  <h2>Cuidando do seu sorriso</h2>
+  <p><span class="orb">✦</span> Amigos do Sorriso · Rondonópolis - MT <span class="orb">✦</span></p>
+</footer>
+
+<div class="meter" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="#FFD84D" stroke="#2E3192" stroke-width="1.5"/><circle cx="8" cy="9" r="1.3" fill="#2E3192"/><circle cx="16" cy="9" r="1.3" fill="#2E3192"/><path id="mm" d="M7 15 Q12 15 17 15" fill="none" stroke="#2E3192" stroke-width="1.8" stroke-linecap="round"/></svg><div class="trk"><i></i></div></div>
+
+<a class="wa" href="https://wa.me/5566992756817?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta." target="_blank" rel="noopener" aria-label="Falar no WhatsApp"><svg width="32" height="32" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.600 15.100L2 22l5-1.300A10 10 0 1 0 12 2zm5.200 14c-.2.600-1.300 1.200-1.800 1.200-.5.100-1 .200-3.300-.700-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 .9-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.300 0 .5l-.4.600c-.1.100-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.200 1 2.100 1.300 2.400 1.500.3.100.5.100.6-.1l.9-1c.2-.3.400-.2.600-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.300z"/></svg></a>
+
+<script>
+(function(){
+var rd=matchMedia('(prefers-reduced-motion:reduce)').matches,$=function(s){return document.querySelector(s)};
+var t=$('#ttl'),txt='AMIGOS DO SORRISO';
+var n=0;txt.split(' ').forEach(function(wd,k){if(k)t.appendChild(document.createTextNode(' '));var w=document.createElement('span');w.className='w';wd.split('').forEach(function(c){var s=document.createElement('span');s.className='ch';s.style.setProperty('--i',n++);s.textContent=c;w.appendChild(s)});t.appendChild(w)});
+/* reveal + counters */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isTarget&&!e.isIntersecting)return;if(!e.isIntersecting)return;var el=e.target;el.classList.add('in');io.unobserve(el);
+el.querySelectorAll&&el.querySelectorAll('[data-to]').forEach(count);
+if(el.id==='stamps')el.querySelectorAll('.stamp').forEach(function(s){s.classList.add('in')})})},{threshold:.25});
+document.querySelectorAll('.rv,#stamps').forEach(function(e){io.observe(e)});
+function count(el){var to=+el.dataset.to,dec=+el.dataset.dec||0,suf=el.dataset.suf||'',t0=performance.now();
+function f(n){var k=Math.min(1,(n-t0)/1400),v=to*(1-Math.pow(1-k,3));el.textContent=v.toLocaleString('pt-BR',{minimumFractionDigits:dec,maximumFractionDigits:dec})+(k===1?suf:'');if(k<1)requestAnimationFrame(f)}
+rd?(el.textContent=to.toLocaleString('pt-BR',{minimumFractionDigits:dec})+suf):requestAnimationFrame(f)}
+/* scroll */
+var st=$('#stage'),sp=document.querySelectorAll('.spk'),mm=$('#mm'),tk=false;
+function upd(){tk=false;var y=scrollY,h=document.documentElement.scrollHeight-innerHeight,p=h>0?Math.min(1,y/h):0;
+document.documentElement.style.setProperty('--p',p.toFixed(3));
+mm.setAttribute('d','M7 15 Q12 '+(15+p*8).toFixed(1)+' 17 15');
+if(!rd){var q=Math.min(1,y/innerHeight);st.style.transform='translate3d(0,'+(-q*90)+'px,0) scale('+(1-q*.18)+')';st.style.opacity=1-q*.7;
+sp.forEach(function(s){s.style.translate=(s.dataset.s*q*3)+'px '+(-q*80)+'px'})}}
+addEventListener('scroll',function(){if(!tk){tk=true;requestAnimationFrame(upd)}},{passive:true});upd();
+/* slider */
+var r=$('#rng'),ba=$('#ba');r.addEventListener('input',function(){ba.style.setProperty('--v',r.value+'%')});
+})();
+</script>
+</body>
+</html>
